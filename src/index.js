@@ -3,10 +3,27 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import "bootstrap/dist/css/bootstrap.min.css";
+import 'react-toastify/dist/ReactToastify.css';
+
+import { BrowserRouter as Router } from 'react-router-dom'
+import { Provider } from 'react-redux';
+import { createStore , applyMiddleware, compose} from 'redux'
+import thunk from 'redux-thunk';
+import ContactReducer from './redux/reducer/contactReducer'
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const middleware = [thunk];
+const store=createStore(ContactReducer,composeEnhancers(  applyMiddleware(...middleware)))
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Provider store={store}>
+      <App />
+      </Provider>     
+    </Router>
+  
   </React.StrictMode>,
   document.getElementById('root')
 );
