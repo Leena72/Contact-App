@@ -53,7 +53,7 @@ const AddContact = () => {
         //dispatch action
         dispatch({ type: "ADD_CONTACT", payload: data })
         toast.success("Contact added successfully :)")
-        history.push('/')
+        history.push('/contact')
 
     }
 
@@ -79,7 +79,7 @@ const AddContact = () => {
                         </div>
                         <div className="form-group mb-3 text-center">
                             <input type="submit" value="ADD CONTACT" className="btn btn-outline-primary mx-3" />
-                            <Link to="/" className="btn btn-outline-danger" >Cancel</Link>
+                            <Link to="/contact" className="btn btn-outline-danger" >Cancel</Link>
                         </div>
                     </form>
                 </div>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useSelector,useDispatch } from 'react-redux'
 import { toast } from 'react-toastify'
 
-const Home = () => {
+const Contact = () => {
     const ContactList = useSelector(state => state)
     const dispatch = useDispatch()
     console.log(">>>", ContactList)
@@ -18,7 +18,8 @@ const Home = () => {
     return (
         <div className="container  my-5">
             <div className="row">
-                <div className="col-md-12 mb-4  text-right">
+                <div className="col-md-12 mb-4 d-flex justify-content-between">
+                <Link to="/" className="btn btn-outline-secondary">BACK</Link>
                     <Link to="/add" className="btn btn-outline-info">Add Contact</Link>
 
                 </div>
@@ -62,4 +63,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Contact

@@ -1,8 +1,9 @@
 import React from 'react'
 import Navbar from './component/navbar'
-import Home from './component/home'
-import AddContact from './component/addcontact'
-import EditContact from './component/editContact'
+import Contact from './component/contact/Contact'
+import AddContact from './component/contact/addcontact'
+import Home from './Home'
+import EditContact from './component/contact/editContact'
 import { ToastContainer } from 'react-toastify';
 import { Switch, Route } from 'react-router-dom'
 
@@ -14,7 +15,11 @@ const App = () => {
       <Navbar />
       <Switch>
         <Route exact path="/" >
-         <Home/>
+          <Home />
+        </Route>
+        {/* contact app routes */}
+        <Route exact path="/contact" >
+          <Contact />
         </Route>
         <Route path="/add" >
           <AddContact />

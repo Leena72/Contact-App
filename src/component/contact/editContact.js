@@ -61,7 +61,7 @@ const EditContact = () => {
         //dispatch action
         dispatch({ type: "UPDATE_CONTACT", payload: data })
         toast.success("Contact updated successfully :)")
-        history.push('/')
+        history.push('/contact')
 
     }
 
@@ -90,7 +90,7 @@ const EditContact = () => {
                                 </div>
                                 <div className="form-group mb-3 text-center">
                                     <button type="submit" className="btn btn-outline-primary mx-3">Update Contact</button>
-                                    <Link to="/" className="btn btn-outline-danger" >Cancel</Link>
+                                    <Link to="/contact" className="btn btn-outline-danger" >Cancel</Link>
                                 </div>
                             </form>
                         </div>
